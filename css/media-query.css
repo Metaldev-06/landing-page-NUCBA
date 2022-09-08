@@ -1,0 +1,17 @@
+/* Header */
+
+@media (max-width: 510px) {
+    .menu {
+        gap: 8px;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 415px) {
+    .menu {
+        display: none;
+    }
+    .container-button {
+        display: block;
+    }
+}
