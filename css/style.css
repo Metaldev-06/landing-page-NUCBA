@@ -31,18 +31,21 @@ body {
 .logo-container img {
     width: 27px;
 }
-.menu {
+.menu ul {
+    font-weight: bold;
     display: flex;
     gap: 20px;
-    font-weight: bold;
 }
-
+.menu ul li{
+    list-style: none;
+    transition: transform .3s;
+}
 .container-header a {
     color: white;
     transition: transform .3s;
     text-decoration: none;
 }
-.logo-container:hover, .container-header a:hover{
+.logo-container:hover, .container-header ul li:hover{
     transform: scale(1.1);
     text-shadow: 1px 1px 10px rgba(143, 143, 143, 0.46);
 }
