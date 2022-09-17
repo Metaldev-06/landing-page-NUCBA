@@ -2,17 +2,22 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
 }
 
 body {
     font-family: 'Roboto', sans-serif;
+    background-color: #FFFBF2;
+    scroll-behavior: smooth;
 }
+
+/* HEADER */
 
 .header {
     width: 100%;
     height: 10vh;
-    background-color: #111111;
-    box-shadow: 0 0 30px rgba(39, 39, 39, 0.799);
+    position: fixed;
+    z-index: 9999999;
 }
 .container-header {
     width: 90%;
@@ -43,11 +48,9 @@ body {
 .container-header a {
     color: white;
     transition: transform .3s;
-    text-decoration: none;
 }
 .logo-container:hover, .container-header ul li:hover{
     transform: scale(1.1);
-    text-shadow: 1px 1px 10px rgba(143, 143, 143, 0.46);
 }
 
 .container-button {
@@ -97,4 +100,128 @@ body {
     transform: rotate(-40deg);
     top: 20px;
     width: 80%;
+}
+
+/* HERO */
+
+.hero {
+    width: 100%;
+    height: 100vh;
+    background-image: url("../assets/img/background.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    background-attachment: fixed;
+}
+.hero-container {
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.text-container {
+    color: white;
+    font-size: 1.5rem;
+}
+.separador {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+/* ABOUT ME */
+main {
+    width: 90%;
+    margin: 0 auto;
+}
+.about-me {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 50px;
+}
+.title-center {
+    width: 100%;
+    text-align: center;
+    color: #DA9F5B;
+    font-size: 1.5rem;
+}
+.subtitle {
+    color: #33211D;
+    font-weight: bold;
+}
+.title-center h3 {
+    font-size: 2.5rem;
+}
+.linea {
+    width: 3px;
+    height: 130px;
+    background-color: #DA9F5B;
+    margin: 0 auto;
+}
+.about-me-article {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    gap: 30px;
+    justify-content: space-evenly;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+.left-text, .rigth-text {
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.about-me-article h3{
+    font-size: 2rem;
+}
+.about-me-article p{
+    font-size: 1.3rem;
+    color: #797979;
+    line-height: 35px;
+}
+.about-me-article .text-color {
+    color: #33211D;
+}
+.center-img {
+    min-width: 200px;
+    min-height: 200px;
+    max-width: 400px;
+    max-height: 400px;
+}
+.center-img img {
+    width: 100%;
+    height: 100%;
+}
+.lista {
+    font-size: 1.3rem;
+    color: #33211D;
+    list-style-position: inside;
+    list-style: none;
+}
+
+.lista li:before {
+    content: '✓ ';
+    color: #DA9F5B;
+}
+.btn-aboutMe {
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    background-color: #DA9F5B;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.btn-aboutMe:hover {
+    background-color: #e1b078;
+}
+.btn-aboutMe:active {
+    background-color: #ea932f;
 }
