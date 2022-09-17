@@ -4,11 +4,28 @@
     box-sizing: border-box;
     text-decoration: none;
 }
-
+*::selection {
+    background-color: #33211D;
+    color: white;
+}
+html {
+    scroll-behavior: smooth;
+}
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #FFFBF2;
-    scroll-behavior: smooth;
+}
+body::-webkit-scrollbar {
+    width: 8px;
+}
+  
+body::-webkit-scrollbar-track {
+    background: transparent;
+}
+  
+body::-webkit-scrollbar-thumb {
+    background-color: #33211D;
+    border-radius: 20px;
 }
 
 /* HEADER */
@@ -49,8 +66,46 @@ body {
     color: white;
     transition: transform .3s;
 }
-.logo-container:hover, .container-header ul li:hover{
+.logo-container:hover {
     transform: scale(1.1);
+}
+.menu a {
+    font-size: 18px;
+    color: #e1e1e1;
+    font-family: inherit;
+    font-weight: 800;
+    cursor: pointer;
+    position: relative;
+    border: none;
+    background: none;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: color;
+}
+  
+.menu a:focus,
+.menu a:hover {
+    color: #fff;
+}
+  
+.menu a:focus:after,
+.menu a:hover:after {
+    width: 100%;
+    left: 0%;
+}
+  
+.menu a:after {
+    content: "";
+    pointer-events: none;
+    bottom: -2px;
+    left: 50%;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #fff;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: width, left;
 }
 
 .container-button {
@@ -192,6 +247,7 @@ main {
     min-height: 200px;
     max-width: 400px;
     max-height: 400px;
+    filter: drop-shadow(4px 4px 5px rgba(0, 0, 0, 0.667));
 }
 .center-img img {
     width: 100%;
@@ -224,4 +280,33 @@ main {
 }
 .btn-aboutMe:active {
     background-color: #ea932f;
+}
+
+/* SCROLL TO TOP */
+
+.scroll-top {
+    width: 60px;
+    height: 60px;
+    background-color: #DA9F5B;
+    position: fixed;
+    bottom: 15px;
+    right: 10px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: scroll 1s infinite ease-out;
+}
+
+
+@keyframes scroll {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
