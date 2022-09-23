@@ -113,49 +113,66 @@ body::-webkit-scrollbar-thumb {
     height: 40px;
     display: none;
 }
-.btn-container {
+
+
+.container-button ul{
+    display: none;
+}
+  
+.container-button input:checked  ~ ul{
+    display:block;
+}
+
+.container-button input {
+    display: none;
+}
+
+.container-button label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 100%;
-    position: relative;
-    background-color: transparent;
-    border: none;
+    font-size: 40px;
+    user-select: none;
+    color: white;
+    cursor: pointer;
 }
 
-.line1, .line2, .line3 {
-    position: absolute;
-    content: '';
+.container-button ul{
     width: 100%;
-    height: 3px;
-    background-color: white;
-    border-radius: 5px;
-    transition: all .3s ease;
-    right: 0;
-}
-.line1 {
-    top: 10px;
-}
-
-.line2 {
-    top: 19px;
+    position: absolute;
+    left: 0;
+    top: 12vh;
+    text-align: center;
+    border-radius: 8px;
+    background: #33211D;
+    padding: 10px;
 }
 
-.line3 {
-    top: 28px;
+
+.container-button li {
+    width: 100%;
+    display: block;
+    padding: 10px;
+    list-style: none;
+    transition: transform .3s;
 }
 
-.btn-container:active .line2 {
-    width: 0;
+.container-button li:hover {
+    filter: brightness(110%);
+    transform: scale(1.1);
 }
-.btn-container:active .line1 {
-    transform: rotate(40deg);
-    top: 20px;
-    width: 80%;
+.container-button a {
+    width: 100%;
+    display: block;
+    font-weight: bold   ;
 }
-.btn-container:active .line3 {
-    transform: rotate(-40deg);
-    top: 20px;
-    width: 80%;
-}
+
+
+
+
+
 
 /* HERO */
 
