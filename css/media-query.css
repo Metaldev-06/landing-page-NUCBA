@@ -5,6 +5,17 @@
         flex-direction: column;
     }
 }
+@media (max-width: 548px) {
+    .contact-info {
+        gap: 20px;
+    }
+    .card-contact-info {
+        width: 100%;
+    }
+    .card {
+        flex-direction: column;
+    }
+}
 
 @media (max-width: 430px) {
     .container-header {
@@ -16,4 +27,7 @@
     .container-button {
         display: block;
     }
+    
+    
+    
 }
